@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f08c5e;
+    overflow: hidden;
+}
+
+
+.heart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 270px;
+    background: red;
+    clip-path: path("M150 270 Q30 180 30 90 A60 60 0 0 1 150 90 A60 60 0 0 1 270 90 Q270 180 150 270 Z");
+    transform: translate(-50%, -50%) scale(1);
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: translate(-50%, -50%) scale(1); }
+    to   { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+
+.h0 { background: #ffcccc; transform: translate(-50%, -50%) scale(6); animation: move0 linear 3s infinite; }
+.h1 { background: #ff6666; transform: translate(-50%, -50%) scale(5); animation: move1 linear 3s infinite; }
+.h2 { background: #cc0000; transform: translate(-50%, -50%) scale(4); animation: move2 linear 3s infinite; }
+.h3 { background: #ffcccc; transform: translate(-50%, -50%) scale(3); animation: move3 linear 3s infinite; }
+.h4 { background: #ff6666; transform: translate(-50%, -50%) scale(2); animation: move4 linear 3s infinite; }
+.h5 { background: #cc0000; transform: translate(-50%, -50%) scale(1.5); animation: move5 linear 3s infinite; }
+.h6 { background: #ffcccc; transform: translate(-50%, -50%) scale(1); animation: move6 linear 3s infinite; }
+
+@keyframes move0 { to { transform: translate(-50%, -50%) scale(7); background: #cc0000; } }
+@keyframes move1 { to { transform: translate(-50%, -50%) scale(6); background: #ffcccc; } }
+@keyframes move2 { to { transform: translate(-50%, -50%) scale(5); background: #ff6666; } }
+@keyframes move3 { to { transform: translate(-50%, -50%) scale(4); background: #cc0000; } }
+@keyframes move4 { to { transform: translate(-50%, -50%) scale(3); background: #ffcccc; } }
+@keyframes move5 { to { transform: translate(-50%, -50%) scale(2); background: #ff6666; } }
+@keyframes move6 { to { transform: translate(-50%, -50%) scale(1.5); background: #cc0000; } }
